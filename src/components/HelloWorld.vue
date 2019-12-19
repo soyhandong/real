@@ -2,8 +2,9 @@
     <v-app id="inspire">
         <v-app-bar
             app="app"
-            color="blue-grey"
-            dark="dark">
+            color="white"
+            elevate-on-scroll="elevate-on-scroll"
+            scroll-target="#scrolling-techniques-7">
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
             <v-toolbar-title>Calculator</v-toolbar-title>
             <v-spacer/>
@@ -42,96 +43,145 @@
         </v-navigation-drawer>
 
         <v-content>
-            <v-container fluid>
+            <v-container fluid="fluid">
                 <v-layout column="column" row="row">
                     <div class="calculator">
-                        <div class="display">{{current || '0'}}</div>
-                        
+                        <div class="display">
+                            <p class="text-end">
+                                {{current || '0'}}
+                            </p>
+                        </div>
+
                         <v-btn
+                            min-height="60"
                             @click="clear"
                             class="btn operator"
                             tile="tile"
-                            color="indigo"
-                            dark="dark">C</v-btn>
+                            color="white">C</v-btn>
 
-                        <v-btn @click="sign" class="btn" tile="tile" color="indigo" dark="dark">+/-</v-btn>
+                        <v-btn min-height="60" @click="sign" class="btn" tile="tile" color="white">+/-</v-btn>
 
                         <v-btn
+                            min-height="60"
                             @click="percent"
                             class="btn operator"
                             tile="tile"
-                            color="indigo"
-                            dark="dark">%</v-btn>
+                            color="white">%</v-btn>
 
                         <v-btn
+                            min-height="60"
                             @click="append('/')"
                             class="btn operator"
                             tile="tile"
-                            color="indigo"
-                            dark="dark">÷</v-btn>
-
-                        <v-btn @click="append('7')" class="btn" tile="tile" color="indigo" dark="dark">7</v-btn>
-
-                        <v-btn @click="append('8')" class="btn" tile="tile" color="indigo" dark="dark">8</v-btn>
-
-                        <v-btn @click="append('9')" class="btn" tile="tile" color="indigo" dark="dark">9</v-btn>
+                            color="white">÷</v-btn>
 
                         <v-btn
+                            min-height="60"
+                            @click="append('7')"
+                            class="btn"
+                            tile="tile"
+                            color="white">7</v-btn>
+
+                        <v-btn
+                            min-height="60"
+                            @click="append('8')"
+                            class="btn"
+                            tile="tile"
+                            color="white">8</v-btn>
+
+                        <v-btn
+                            min-height="60"
+                            @click="append('9')"
+                            class="btn"
+                            tile="tile"
+                            color="white">9</v-btn>
+
+                        <v-btn
+                            min-height="60"
                             @click="append('*')"
                             class="btn operator"
                             tile="tile"
-                            color="indigo"
-                            dark="dark">x</v-btn>
-
-                        <v-btn @click="append('4')" class="btn" tile="tile" color="indigo" dark="dark">4</v-btn>
-
-                        <v-btn @click="append('5')" class="btn" tile="tile" color="indigo" dark="dark">5</v-btn>
-
-                        <v-btn @click="append('6')" class="btn" tile="tile" color="indigo" dark="dark">6</v-btn>
+                            color="white">x</v-btn>
 
                         <v-btn
+                            min-height="60"
+                            @click="append('4')"
+                            class="btn"
+                            tile="tile"
+                            color="white">4</v-btn>
+
+                        <v-btn
+                            min-height="60"
+                            @click="append('5')"
+                            class="btn"
+                            tile="tile"
+                            color="white">5</v-btn>
+
+                        <v-btn
+                            min-height="60"
+                            @click="append('6')"
+                            class="btn"
+                            tile="tile"
+                            color="white">6</v-btn>
+
+                        <v-btn
+                            min-height="60"
                             @click="append('-')"
                             class="btn operator"
                             tile="tile"
-                            color="indigo"
-                            dark="dark">-</v-btn>
-
-                        <v-btn @click="append('1')" class="btn" tile="tile" color="indigo" dark="dark">1</v-btn>
-
-                        <v-btn @click="append('2')" class="btn" tile="tile" color="indigo" dark="dark">2</v-btn>
-
-                        <v-btn @click="append('3')" class="btn" tile="tile" color="indigo" dark="dark">3</v-btn>
+                            color="white">-</v-btn>
 
                         <v-btn
+                            min-height="60"
+                            @click="append('1')"
+                            class="btn"
+                            tile="tile"
+                            color="white">1</v-btn>
+
+                        <v-btn
+                            min-height="60"
+                            @click="append('2')"
+                            class="btn"
+                            tile="tile"
+                            color="white">2</v-btn>
+
+                        <v-btn
+                            min-height="60"
+                            @click="append('3')"
+                            class="btn"
+                            tile="tile"
+                            color="white">3</v-btn>
+
+                        <v-btn
+                            min-height="60"
                             @click="append('+')"
                             class="btn operator"
                             tile="tile"
-                            color="indigo"
-                            dark="dark">+</v-btn>
+                            color="white">+</v-btn>
 
                         <v-btn
+                            min-height="60"
                             @click="append('0')"
                             class="btn zero"
                             tile="tile"
-                            color="indigo"
-                            dark="dark">0</v-btn>
+                            color="white">0</v-btn>
 
-                        <v-btn @click="dot" class="btn" tile="tile" color="indigo" dark="dark">.</v-btn>
+                        <v-btn min-height="60" @click="dot" class="btn" tile="tile" color="white">.</v-btn>
 
                         <v-btn
+                            min-height="60"
                             @click="equal"
                             class="btn operator"
                             tile="tile"
-                            color="indigo"
-                            dark="dark">=</v-btn>
+                            color="white">=</v-btn>
 
                     </div>
 
                 </v-layout>
             </v-container>
         </v-content>
-
-        <v-footer app="app" color="blue-grey" class="white--text">
+        <v-divider></v-divider>
+        <v-footer app="app" class="coloring">
             <span>DDhouse</span>
             <v-spacer/>
             <span>2019</span>
@@ -207,22 +257,24 @@
 
 <style scoped="scoped">
     .calculator {
-        font-size: 20px;
+        font-size: 30px;
         display: grid;
-
     }
     .display {
         grid-column: 1 / 5;
-        height: 300px;
-        background-color: #333;
-        color: white;
+        height: 200px;
+        background-color: white;
+        color: black;
     }
-
     .zero {
         grid-column: 1 / 3;
     }
     .btn {
-        border: aliceblue;
+        border: rgb(220, 226, 233);
     }
     .operator {}
+    .coloring {
+        background-color: white;
+        color: black;
+    }
 </style>
