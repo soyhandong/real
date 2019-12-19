@@ -51,59 +51,107 @@
                             <div @click="clear" class="btn operator">
                                 <v-btn tile="tile" color="indigo" dark="dark">C</v-btn>
                             </div>
-                            <div @click="sign" class="btn">
-                                <v-btn @click="sign" class="btn" tile="tile" color="indigo" dark="dark">+/-</v-btn>
+                            <div @click="rad" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">rad</v-btn>
+                            </div>
+                            <div @click="append('Math.sqrt(')" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">√</v-btn>
+                            </div>
+                            <div @click="append('(')" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">(</v-btn>
+                            </div>
+                            <div @click="append(')')" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">)</v-btn>
                             </div>
                             <div @click="percent" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">%</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">%</v-btn>
                             </div>
                             <div @click="append('/')" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">÷</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">÷</v-btn>
+                            </div>
+                            <div @click="append('Math.sin(')" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">sin</v-btn>
+                            </div>
+                            <div @click="append('Math.cos(')" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">cos</v-btn>
+                            </div>
+                            <div @click="append('Math.tan(')" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">tan</v-btn>
                             </div>
                             <div @click="append('7')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">7</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">7</v-btn>
                             </div>
                             <div @click="append('8')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">8</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">8</v-btn>
                             </div>
                             <div @click="append('9')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">9</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">9</v-btn>
                             </div>
                             <div @click="append('*')" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">x</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">x</v-btn>
+                            </div>
+                            <div @click="append('Math.log(')" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">ln</v-btn>
+                            </div>
+                            <div @click="append('Math.log10(')" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">log</v-btn>
+                            </div>
+                            <div @click="xdivide" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">1/x</v-btn>
                             </div>
                             <div @click="append('4')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">4</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">4</v-btn>
                             </div>
                             <div @click="append('5')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">5</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">5</v-btn>
                             </div>
                             <div @click="append('6')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">6</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">6</v-btn>
                             </div>
                             <div @click="append('-')" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">-</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">-</v-btn>
+                            </div>
+                            <div @click="append('Math.exp(')" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">e^x</v-btn>
+                            </div>
+                            <div @click="xtpow" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">x^2</v-btn>
+                            </div>
+                            <div @click="xypow" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">x^y</v-btn>
                             </div>
                             <div @click="append('1')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">1</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">1</v-btn>
                             </div>
                             <div @click="append('2')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">2</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">2</v-btn>
                             </div>
                             <div @click="append('3')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">3</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">3</v-btn>
                             </div>
                             <div @click="append('+')" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">+</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">+</v-btn>
                             </div>
-                            <div @click="append('0')" class="btn zero">
-                                <v-btn tile="tile" color="indigo" dark="dark">0</v-btn>
+                            <div @click="abs" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">|x|</v-btn>
+                            </div>
+                            <div @click="piyo" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">PI</v-btn>
+                            </div>
+                            <div @click="juste" class="btn operator">
+                                <v-btn  tile="tile" color="indigo" dark="dark">e</v-btn>
+                            </div>
+                            <div @click="sign" class="btn">
+                                <v-btn  tile="tile" color="indigo" dark="dark">+/-</v-btn>
+                            </div>
+                            <div @click="append('0')" class="btn">
+                                <v-btn  tile="tile" color="indigo" dark="dark">0</v-btn>
                             </div>
                             <div @click="dot" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">.</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">.</v-btn>
                             </div>
                             <div @click="equal" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">=</v-btn>
+                                <v-btn  tile="tile" color="indigo" dark="dark">=</v-btn>
                             </div>
                         </div>
                     </v-flex>
@@ -229,21 +277,18 @@
     .calculator {
         font-size: 20px;
         display: grid;
-
+        
     }
     .display {
-        grid-column: 1 / 5;
-
+        grid-column: 1 / 8;
+           
         background-color: #333;
         color: white;
     }
-
-    .zero {
-        grid-column: 1 / 3;
-    }
     .btn {
-        border: aliceblue;
+        border:aliceblue;
     }
     .operator {
-        }
+        
+    }
 </style>
