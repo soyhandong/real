@@ -2,7 +2,6 @@
     <v-app id="inspire">
         <v-app-bar
             app="app"
-            clipped-right="cl3ipped-right"
             color="blue-grey"
             dark="dark">
             <v-app-bar-nav-icon @click.stop="drawer = !drawer"/>
@@ -43,70 +42,91 @@
         </v-navigation-drawer>
 
         <v-content>
-            <v-container>
+            <v-container fluid>
                 <v-layout column="column" row="row">
-                    <v-flex>
-                        <div class="calculator">
-                            <div class="display">{{current || '0'}}</div>
-                            <div @click="clear" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">C</v-btn>
-                            </div>
-                            <div @click="sign" class="btn">
-                                <v-btn @click="sign" class="btn" tile="tile" color="indigo" dark="dark">+/-</v-btn>
-                            </div>
-                            <div @click="percent" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">%</v-btn>
-                            </div>
-                            <div @click="append('/')" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">÷</v-btn>
-                            </div>
-                            <div @click="append('7')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">7</v-btn>
-                            </div>
-                            <div @click="append('8')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">8</v-btn>
-                            </div>
-                            <div @click="append('9')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">9</v-btn>
-                            </div>
-                            <div @click="append('*')" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">x</v-btn>
-                            </div>
-                            <div @click="append('4')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">4</v-btn>
-                            </div>
-                            <div @click="append('5')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">5</v-btn>
-                            </div>
-                            <div @click="append('6')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">6</v-btn>
-                            </div>
-                            <div @click="append('-')" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">-</v-btn>
-                            </div>
-                            <div @click="append('1')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">1</v-btn>
-                            </div>
-                            <div @click="append('2')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">2</v-btn>
-                            </div>
-                            <div @click="append('3')" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">3</v-btn>
-                            </div>
-                            <div @click="append('+')" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">+</v-btn>
-                            </div>
-                            <div @click="append('0')" class="btn zero">
-                                <v-btn tile="tile" color="indigo" dark="dark">0</v-btn>
-                            </div>
-                            <div @click="dot" class="btn">
-                                <v-btn tile="tile" color="indigo" dark="dark">.</v-btn>
-                            </div>
-                            <div @click="equal" class="btn operator">
-                                <v-btn tile="tile" color="indigo" dark="dark">=</v-btn>
-                            </div>
-                        </div>
-                    </v-flex>
+                    <div class="calculator">
+                        <div class="display">{{current || '0'}}</div>
+                        
+                        <v-btn
+                            @click="clear"
+                            class="btn operator"
+                            tile="tile"
+                            color="indigo"
+                            dark="dark">C</v-btn>
+
+                        <v-btn @click="sign" class="btn" tile="tile" color="indigo" dark="dark">+/-</v-btn>
+
+                        <v-btn
+                            @click="percent"
+                            class="btn operator"
+                            tile="tile"
+                            color="indigo"
+                            dark="dark">%</v-btn>
+
+                        <v-btn
+                            @click="append('/')"
+                            class="btn operator"
+                            tile="tile"
+                            color="indigo"
+                            dark="dark">÷</v-btn>
+
+                        <v-btn @click="append('7')" class="btn" tile="tile" color="indigo" dark="dark">7</v-btn>
+
+                        <v-btn @click="append('8')" class="btn" tile="tile" color="indigo" dark="dark">8</v-btn>
+
+                        <v-btn @click="append('9')" class="btn" tile="tile" color="indigo" dark="dark">9</v-btn>
+
+                        <v-btn
+                            @click="append('*')"
+                            class="btn operator"
+                            tile="tile"
+                            color="indigo"
+                            dark="dark">x</v-btn>
+
+                        <v-btn @click="append('4')" class="btn" tile="tile" color="indigo" dark="dark">4</v-btn>
+
+                        <v-btn @click="append('5')" class="btn" tile="tile" color="indigo" dark="dark">5</v-btn>
+
+                        <v-btn @click="append('6')" class="btn" tile="tile" color="indigo" dark="dark">6</v-btn>
+
+                        <v-btn
+                            @click="append('-')"
+                            class="btn operator"
+                            tile="tile"
+                            color="indigo"
+                            dark="dark">-</v-btn>
+
+                        <v-btn @click="append('1')" class="btn" tile="tile" color="indigo" dark="dark">1</v-btn>
+
+                        <v-btn @click="append('2')" class="btn" tile="tile" color="indigo" dark="dark">2</v-btn>
+
+                        <v-btn @click="append('3')" class="btn" tile="tile" color="indigo" dark="dark">3</v-btn>
+
+                        <v-btn
+                            @click="append('+')"
+                            class="btn operator"
+                            tile="tile"
+                            color="indigo"
+                            dark="dark">+</v-btn>
+
+                        <v-btn
+                            @click="append('0')"
+                            class="btn zero"
+                            tile="tile"
+                            color="indigo"
+                            dark="dark">0</v-btn>
+
+                        <v-btn @click="dot" class="btn" tile="tile" color="indigo" dark="dark">.</v-btn>
+
+                        <v-btn
+                            @click="equal"
+                            class="btn operator"
+                            tile="tile"
+                            color="indigo"
+                            dark="dark">=</v-btn>
+
+                    </div>
+
                 </v-layout>
             </v-container>
         </v-content>
@@ -180,46 +200,6 @@
             equal() {
                 this.current = eval(this.current);
                 this.previous = null;
-            },
-            pequal() {
-                this.current = `${this.operator(
-                    parseFloat(this.current),
-                    parseFloat(this.previous)
-                )}`;
-            },
-            piyo() {
-                this.operator = (a) => Math.PI * a;
-                this.setPrevious();
-                this.equal();
-            },
-            rad() {
-                this.operator = (a) => a * 180 / Math.PI;
-                this.setPrevious();
-                this.pequal();
-            },
-            xdivide() {
-                this.operator = (a) => 1 / a;
-                this.setPrevious();
-                this.pequal();
-            },
-            xtpow() {
-                this.operator = (a) => Math.pow(a, 2);
-                this.setPrevious();
-                this.pequal();
-            },
-            xypow() {
-                this.operator = (a, b) => Math.pow(b, a);
-                this.setPrevious();
-            },
-            abs() {
-                this.operator = (a) => Math.abs(a);
-                this.setPrevious();
-                this.pequal();
-            },
-            juste() {
-                this.operator = (a) => a * Math.E;
-                this.setPrevious();
-                this.pequal();
             }
         }
     }
@@ -233,7 +213,7 @@
     }
     .display {
         grid-column: 1 / 5;
-
+        height: 300px;
         background-color: #333;
         color: white;
     }
@@ -244,6 +224,5 @@
     .btn {
         border: aliceblue;
     }
-    .operator {
-        }
+    .operator {}
 </style>
