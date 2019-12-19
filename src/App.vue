@@ -1,10 +1,7 @@
 <template>
     <v-app>
         <v-app-bar app="app" color="primary" dark="dark"></v-app-bar>
-
-        <v-content>
-            <HelloWorld/>
-        </v-content>
+            <HelloWorld/>        
     </v-app>
 </template>
 

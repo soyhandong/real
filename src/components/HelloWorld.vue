@@ -1,6 +1,7 @@
 <template>
-    <v-app id="inspire">
-        <v-app-bar
+<v-app id = "inspire">
+      <v-card>
+         <v-app-bar
             app="app"
             color="white"
             elevate-on-scroll="elevate-on-scroll"
@@ -41,9 +42,8 @@
 
             </v-list>
         </v-navigation-drawer>
-
-        <v-content>
-            <v-container fluid="fluid">
+<v-content>
+            <v-container>
                 <v-layout column="column" row="row">
                     <div class="calculator">
                         <div class="display">
@@ -179,22 +179,16 @@
 
                 </v-layout>
             </v-container>
+            
         </v-content>
-        <v-divider></v-divider>
-        <v-footer app="app" class="coloring">
-            <span>DDhouse</span>
-            <v-spacer/>
-            <span>2019</span>
-        </v-footer>
-    </v-app>
+        
+      </v-card>
+</v-app>
 </template>
 
 <script>
-    export default {
-        props: {
-            source: String
-        },
-        data: () => ({
+  export default {
+    data: () => ({
             drawer: null,
             drawerRight: null,
             right: false,
@@ -252,7 +246,7 @@
                 this.previous = null;
             }
         }
-    }
+  }
 </script>
 
 <style scoped="scoped">
@@ -262,7 +256,7 @@
     }
     .display {
         grid-column: 1 / 5;
-        height: 200px;
+        height: 250px;
         background-color: white;
         color: black;
     }
